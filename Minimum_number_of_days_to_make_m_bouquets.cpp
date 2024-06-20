@@ -52,8 +52,3 @@ int minDays(vector<int>& bloomDay, int m, int k){
     }
     return ans;
 }
-int main(){
-    vector<int> inp = {1,10,2,9,3,8,4,7,5,6};
-    cout << minDays(inp, 4, 2) << endl;
-    return 0;
-}
