@@ -2,10 +2,10 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
-vector<int> dp(101,-1);
+vector<int> dp(105,-1);
 vector<int> s;
 int f(int day){
-    if(dp[day] > 0){
+    if(dp[day] != -1 ){
         return dp[day];
     }
     else if(day == (s.size()-1)){
@@ -22,13 +22,14 @@ int f(int day){
     }
 }
 int rob(vector<int>& nums){
+    fill(dp.begin(), dp.end(), -1);
     s = nums;
     int a = f(0);
     int b = f(1);
     return max(a,b);
 }
 int main(){
-    vector<int> cost = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
-    cout<<rob(cost)<<endl;
+    vector<int> inp ={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+    cout << rob(inp) << endl;
     return 0;
 }
