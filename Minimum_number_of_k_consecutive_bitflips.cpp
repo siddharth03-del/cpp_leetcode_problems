@@ -51,8 +51,3 @@ int minKBitFlips(vector<int>& nums, int k){
     }
     return res;
 }
-int main(){
-    vector<int> inp ={1,1,0};
-    int k = 2;
-    cout << minKBitFlips(inp, k) << endl;
-}
