@@ -18,7 +18,7 @@ int minEatingSpeed(vector<int>& piles, int h){
         for(int i=0; i<piles.size(); i++){
             double num1 = piles[i];
             double num2 = mid;
-            int temp = ceil(num1/num2);
+            double temp = ceil(num1/num2);
             eatinghours = temp + eatinghours;
         }
         if(eatinghours <= h){
