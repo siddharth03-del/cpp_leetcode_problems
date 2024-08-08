@@ -7,7 +7,7 @@ class Solution{
     public:
     vector<vector<int>> matrix;
     int findCity(int n, vector<vector<int>>& edges, int distanceThreshold){
-        matrix.resize(n, vector<int>(n -1));
+        matrix.resize(n, vector<int>(n, -1));
         for(int i = 0; i < edges.size(); i++){
             vector<int> vec = edges[i];
             int from = vec[0];
