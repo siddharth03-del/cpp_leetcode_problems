@@ -16,7 +16,16 @@ class MyLinkedList{
     MyLinkedList(){
         head = NULL;
     }
-
+    void display(){
+        if(head == NULL){
+            return;
+        }
+        node* curr = head;
+        while(curr != NULL){
+            cout << curr->data << endl;
+            curr = curr->next;
+        }
+    }
     int get(int index){
     if(head == NULL){
         return -1;
