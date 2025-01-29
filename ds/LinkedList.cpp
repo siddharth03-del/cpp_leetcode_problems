@@ -22,9 +22,10 @@ class MyLinkedList{
         }
         node* curr = head;
         while(curr != NULL){
-            cout << curr->data << endl;
+            cout << curr->data << "  ";
             curr = curr->next;
         }
+        cout << endl;
     }
     int get(int index){
     if(head == NULL){
@@ -69,7 +70,6 @@ class MyLinkedList{
         temp->next = new node(val);
     }
     }
-
     void addAtIndex(int index, int val){
     if(head == NULL && index!= 0){
         return;
@@ -155,3 +155,16 @@ class MyLinkedList{
     }
     }
 };
+
+int main(){
+    MyLinkedList ll;
+    ll.addAtHead(1);
+    ll.display();
+    ll.addtAtTail(2);
+    ll.display();
+    ll.addAtHead(5);
+    ll.display();
+    ll.deleteAtIndex(1);
+    ll.display();
+    return 0;
+}
